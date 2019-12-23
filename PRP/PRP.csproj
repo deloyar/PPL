@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3748269E-1C65-4688-A9D5-22592C74D380}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PRP</RootNamespace>
+    <AssemblyName>PRP</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PP.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Design, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\19.11.2019\PRPD\PRP\bin\Debug\CrystalDecisions.CrystalReports.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\19.11.2019\PRPD\PRP\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\19.11.2019\PRPD\PRP\bin\Debug\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\19.11.2019\PRPD\PRP\bin\Debug\CrystalDecisions.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\19.11.2019\PRPD\PRP\bin\Debug\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CDB\Config\db_cdb.cs" />
+    <Compile Include="CDB\Config\db_ppl.cs" />
+    <Compile Include="CDB\Function\MethodOrFunction.cs" />
+    <Compile Include="CDB\Function\PPLComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDB\Function\PPLDataGridView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CDB\Function\PPLDataGridView.Designer.cs">
+      <DependentUpon>PPLDataGridView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDB\Function\PPLDecimalTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDB\Function\PPLNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CDB\Function\PPLNavigation.Designer.cs">
+      <DependentUpon>PPLNavigation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDB\Function\PPLNumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDB\Function\PPLTextOnlyTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDB\Tool\report_viwer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CDB\Tool\report_viwer.Designer.cs">
+      <DependentUpon>report_viwer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDB\Function\DropdownControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDB\Function\DropdownControl.Designer.cs">
+      <DependentUpon>DropdownControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDB\Function\EasyCompletionComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CDB\Function\EasyCompletionComboBox.Designer.cs">
+      <DependentUpon>EasyCompletionComboBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CDB\Function\StringMatcher.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\Distribution\Challan\Chalan.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Chalan.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\Distribution\Challan\Challan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\Distribution\Challan\Challan.Designer.cs">
+      <DependentUpon>Challan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\Inventory\OpeningStock\OpeningStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\Inventory\OpeningStock\OpeningStock.Designer.cs">
+      <DependentUpon>OpeningStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\DataNamesAttribute.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\DataNamesMapper.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\DynamicXml.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form4.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form4.Designer.cs">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form5.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form5.Designer.cs">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form6.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form6.Designer.cs">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form7.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form7.Designer.cs">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\GridDBXML.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\GridDBXML.Designer.cs">
+      <DependentUpon>GridDBXML.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Hierarchy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Hierarchy.Designer.cs">
+      <DependentUpon>Hierarchy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\ModelState.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Node.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\nodeStructure.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\NotifyPropertyChanged.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\NullPropertiesConverter.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\PaperPrintingWastage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\PaperPrintingWastage.designer.cs">
+      <DependentUpon>PaperPrintingWastage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\PropertyMapHelper.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\sample.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\SampleBinding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\SampleBinding.Designer.cs">
+      <DependentUpon>SampleBinding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\SampleModel.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\TestDropDown.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\TestDropDown.Designer.cs">
+      <DependentUpon>TestDropDown.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\User.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Wastage.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail2\XmlManager.cs" />
+    <Compile Include="PPL\Data\MIS\MasterDetail\Order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail\Order.Designer.cs">
+      <DependentUpon>Order.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\Production\PlateTransaction\PlateTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\Production\PlateTransaction\PlateTransaction.Designer.cs">
+      <DependentUpon>PlateTransaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\Production\PlateTransaction\PlateTransaction2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PlateTransaction.resx</DependentUpon>
+    </Compile>
+    <Compile Include="PPL\Data\RND\Subject\SubjectInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\RND\Subject\SubjectInfo.Designer.cs">
+      <DependentUpon>SubjectInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CDB\Function\PPLDataGridView.resx">
+      <DependentUpon>PPLDataGridView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDB\Function\PPLNavigation.resx">
+      <DependentUpon>PPLNavigation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CDB\Tool\report_viwer.resx">
+      <DependentUpon>report_viwer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\Distribution\Challan\Chalan.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Chalan.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\Distribution\Challan\Challan.resx">
+      <DependentUpon>Challan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\Inventory\OpeningStock\OpeningStock.resx">
+      <DependentUpon>OpeningStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form4.resx">
+      <DependentUpon>Form4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form5.resx">
+      <DependentUpon>Form5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form6.resx">
+      <DependentUpon>Form6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form7.resx">
+      <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\GridDBXML.resx">
+      <DependentUpon>GridDBXML.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Hierarchy.resx">
+      <DependentUpon>Hierarchy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\PaperPrintingWastage.resx">
+      <DependentUpon>PaperPrintingWastage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\SampleBinding.resx">
+      <DependentUpon>SampleBinding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\TestDropDown.resx">
+      <DependentUpon>TestDropDown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail\Order.resx">
+      <DependentUpon>Order.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\Production\PlateTransaction\PlateTransaction.resx">
+      <DependentUpon>PlateTransaction.cs</DependentUpon>
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>PlateTransaction2.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\RND\Subject\SubjectInfo.resx">
+      <DependentUpon>SubjectInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\PRP.PPL.Data.MIS.MasterDetail2.Sample.datasource" />
+    <None Include="Properties\DataSources\PRP.PPL.Data.MIS.MasterDetail2.Sample.SampleDataSource" />
+    <None Include="Properties\DataSources\PRP.PPL.Data.MIS.MasterDetail2.User.datasource" />
+    <None Include="Properties\DataSources\PRP.PPL.Data.MIS.MasterDetail2.WorkWithPPLTest1Model.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Custom Control\" />
+    <Folder Include="PPL\Data\Account\" />
+    <Folder Include="PPL\Data\Admin\" />
+    <Folder Include="PPL\Data\HRD\" />
+    <Folder Include="PPL\Data\Marketing\" />
+    <Folder Include="PPL\Data\PMD\" />
+    <Folder Include="PPL\Data\Procurement\" />
+    <Folder Include="PPL\Data\SalesCenter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PP.ico" />
+    <Content Include="Resources\+.png" />
+    <Content Include="Resources\+1.png" />
+    <Content Include="Resources\Accounting-48.png" />
+    <Content Include="Resources\amor.PNG" />
+    <Content Include="Resources\close.png" />
+    <Content Include="Resources\company_logo.png" />
+    <Content Include="Resources\company_logo_report.png" />
+    <Content Include="Resources\Delete-45.png" />
+    <Content Include="Resources\deposit.png" />
+    <Content Include="Resources\fast.png" />
+    <Content Include="Resources\find.png" />
+    <Content Include="Resources\giftcard.png" />
+    <Content Include="Resources\hold.png" />
+    <Content Include="Resources\in_out.png" />
+    <Content Include="Resources\last.png" />
+    <Content Include="Resources\logo.ico" />
+    <Content Include="Resources\logo1.png" />
+    <Content Include="Resources\logo2.png" />
+    <Content Include="Resources\logon.png" />
+    <Content Include="Resources\logout-button-blue-hi.png" />
+    <Content Include="Resources\member.png" />
+    <Content Include="Resources\Minimize Window-45 %283%29.png" />
+    <Content Include="Resources\next.png" />
+    <Content Include="Resources\panjerre.png" />
+    <Content Include="Resources\point-of-sale-icon.png" />
+    <Content Include="Resources\point-of-sale-icon1.png" />
+    <Content Include="Resources\pos - Copy.png" />
+    <Content Include="Resources\pos-icon.png" />
+    <Content Include="Resources\pos-icon1.png" />
+    <Content Include="Resources\previous.png" />
+    <Content Include="Resources\ProductSearch.png" />
+    <Content Include="Resources\ProductSearch1.png" />
+    <Content Include="Resources\Reload.png" />
+    <Content Include="Resources\Reload1.png" />
+    <Content Include="Resources\reloadicon.png" />
+    <Content Include="Resources\reloadicon1.png" />
+    <Content Include="Resources\reloadicon2.png" />
+    <Content Include="Resources\reloadicon3.png" />
+    <Content Include="Resources\remove.png" />
+    <Content Include="Resources\report-icon.png" />
+    <Content Include="Resources\report-icon1.png" />
+    <Content Include="Resources\report-icon11.png" />
+    <Content Include="Resources\report.png" />
+    <Content Include="Resources\return.png" />
+    <Content Include="Resources\rsz_icon_pos.png" />
+    <Content Include="Resources\rsz_icon_pos1.png" />
+    <Content Include="Resources\speciment.jpg" />
+    <Content Include="Resources\stock.png" />
+    <Content Include="Resources\view.png" />
+    <None Include="Resources\print.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\new.png" />
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
