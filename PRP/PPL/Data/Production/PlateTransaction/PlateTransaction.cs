@@ -152,6 +152,10 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             DataTable dt = Connstring.SqlDataTable(sql);
             pplDataNavigation1.Datatable = dt;
 
+            sql = "select * from prd.[PlateMaking Work Order];";
+            dt = Connstring.SqlDataTable(sql);
+            pplDataNavigation2.Datatable = dt;
+
 
             MakeCodePWO();
             ButtonVisibilityUpdate(0);
@@ -1845,13 +1849,24 @@ namespace PRP.PPL.Data.Production.PlateTransaction
 
         private void pplDataNavigation1_UpdateOnChange(object sender, EventArgs e)
         {
-            //if (pplDataNavigation1.ItemNumber == 0)
-            //{
-            //    return;
-            //}
+            
             var id =pplDataNavigation1.Datatable.Rows[pplDataNavigation1.ItemNumber]["Plate Code"].ToString();
             txtPlateInfoSearch.Text = id;
             btnPlateInfoSearch_Click(btnPlateInfoSearch, EventArgs.Empty);
+        }
+
+        private void pplDataNavigation2_UpdateOnChange(object sender, EventArgs e)
+        {
+            //[Plate Work Order No]
+            var id=pplDataNavigation2.Datatable.Rows[pplDataNavigation2.ItemNumber]["Plate Work Order No"].ToString();
+            PlateMakeFind(id);
+    }
+
+
+        private void pplDataNavigation2_UpdateOnChange_4(object sender, EventArgs e)
+        {
+            var id = pplDataNavigation2.Datatable.Rows[pplDataNavigation2.ItemNumber]["Plate Work Order No"].ToString();
+            PlateMakeFind(id);
         }
     }
 }

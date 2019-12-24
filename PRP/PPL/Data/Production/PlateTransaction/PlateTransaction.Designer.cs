@@ -117,6 +117,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             this.btnPlateTypeNew = new System.Windows.Forms.Button();
             this.btnPlateTypeSave = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.pplDataNavigation1 = new PRP.CDB.Function.PPLDataNavigation();
             this.PlateInfoLabelMessage = new System.Windows.Forms.Label();
             this.cboPlateStatus = new System.Windows.Forms.ComboBox();
             this.cboPlateAccountCode = new System.Windows.Forms.ComboBox();
@@ -159,7 +160,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             this.PlateInfoUpdate = new System.Windows.Forms.Button();
             this.PlateInfoNew = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.pplDataNavigation1 = new PRP.CDB.Function.PPLDataNavigation();
+            this.pplDataNavigation2 = new PRP.CDB.Function.PPLDataNavigation();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
@@ -185,6 +186,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // tabPage1
             // 
             this.tabPage1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.tabPage1.Controls.Add(this.pplDataNavigation2);
             this.tabPage1.Controls.Add(this.PlateMakingMessageLabel);
             this.tabPage1.Controls.Add(this.btnPlateMakingWorkOrderSearch);
             this.tabPage1.Controls.Add(this.txtPlateMakingWorkOrderSearch);
@@ -403,7 +405,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 63F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 65F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 102F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 122F));
             this.tableLayoutPanel1.Controls.Add(this.cboPlateMakingPlateType, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label43, 7, 0);
             this.tableLayoutPanel1.Controls.Add(this.label42, 6, 0);
@@ -445,7 +447,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(441, 1);
+            this.label43.Location = new System.Drawing.Point(421, 1);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(45, 26);
             this.label43.TabIndex = 34;
@@ -454,7 +456,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(377, 1);
+            this.label42.Location = new System.Drawing.Point(357, 1);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(47, 13);
             this.label42.TabIndex = 33;
@@ -463,7 +465,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(305, 1);
+            this.label41.Location = new System.Drawing.Point(285, 1);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(57, 13);
             this.label41.TabIndex = 32;
@@ -472,7 +474,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(232, 1);
+            this.label40.Location = new System.Drawing.Point(212, 1);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(50, 13);
             this.label40.TabIndex = 31;
@@ -481,7 +483,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // label39
             // 
             this.label39.AutoSize = true;
-            this.label39.Location = new System.Drawing.Point(164, 1);
+            this.label39.Location = new System.Drawing.Point(144, 1);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(54, 13);
             this.label39.TabIndex = 30;
@@ -501,7 +503,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             this.label37.AutoSize = true;
             this.label37.Location = new System.Drawing.Point(78, 1);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(19, 27);
+            this.label37.Size = new System.Drawing.Size(1, 13);
             this.label37.TabIndex = 1;
             this.label37.Text = "Plate Type Name";
             // 
@@ -512,13 +514,13 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             this.txtPlateMakePlateTypeName.Multiline = true;
             this.txtPlateMakePlateTypeName.Name = "txtPlateMakePlateTypeName";
             this.txtPlateMakePlateTypeName.ReadOnly = true;
-            this.txtPlateMakePlateTypeName.Size = new System.Drawing.Size(20, 20);
+            this.txtPlateMakePlateTypeName.Size = new System.Drawing.Size(1, 20);
             this.txtPlateMakePlateTypeName.TabIndex = 21;
             // 
             // txtPlateMakePlateWidth
             // 
             this.txtPlateMakePlateWidth.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlateMakePlateWidth.Location = new System.Drawing.Point(105, 32);
+            this.txtPlateMakePlateWidth.Location = new System.Drawing.Point(85, 32);
             this.txtPlateMakePlateWidth.Multiline = true;
             this.txtPlateMakePlateWidth.Name = "txtPlateMakePlateWidth";
             this.txtPlateMakePlateWidth.ReadOnly = true;
@@ -528,7 +530,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // txtPlateMakePlateSize
             // 
             this.txtPlateMakePlateSize.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlateMakePlateSize.Location = new System.Drawing.Point(164, 32);
+            this.txtPlateMakePlateSize.Location = new System.Drawing.Point(144, 32);
             this.txtPlateMakePlateSize.Multiline = true;
             this.txtPlateMakePlateSize.Name = "txtPlateMakePlateSize";
             this.txtPlateMakePlateSize.ReadOnly = true;
@@ -539,7 +541,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // txtPlateMakePlateQty
             // 
             this.txtPlateMakePlateQty.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlateMakePlateQty.Location = new System.Drawing.Point(232, 32);
+            this.txtPlateMakePlateQty.Location = new System.Drawing.Point(212, 32);
             this.txtPlateMakePlateQty.Multiline = true;
             this.txtPlateMakePlateQty.Name = "txtPlateMakePlateQty";
             this.txtPlateMakePlateQty.Size = new System.Drawing.Size(66, 20);
@@ -550,7 +552,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // txtPlateMakePlateRate
             // 
             this.txtPlateMakePlateRate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlateMakePlateRate.Location = new System.Drawing.Point(305, 32);
+            this.txtPlateMakePlateRate.Location = new System.Drawing.Point(285, 32);
             this.txtPlateMakePlateRate.Multiline = true;
             this.txtPlateMakePlateRate.Name = "txtPlateMakePlateRate";
             this.txtPlateMakePlateRate.Size = new System.Drawing.Size(65, 20);
@@ -561,7 +563,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // txtPlateMakePlateBill
             // 
             this.txtPlateMakePlateBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlateMakePlateBill.Location = new System.Drawing.Point(377, 32);
+            this.txtPlateMakePlateBill.Location = new System.Drawing.Point(357, 32);
             this.txtPlateMakePlateBill.Multiline = true;
             this.txtPlateMakePlateBill.Name = "txtPlateMakePlateBill";
             this.txtPlateMakePlateBill.ReadOnly = true;
@@ -572,7 +574,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // txtPlateMakeMakingRate
             // 
             this.txtPlateMakeMakingRate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlateMakeMakingRate.Location = new System.Drawing.Point(441, 32);
+            this.txtPlateMakeMakingRate.Location = new System.Drawing.Point(421, 32);
             this.txtPlateMakeMakingRate.Multiline = true;
             this.txtPlateMakeMakingRate.Name = "txtPlateMakeMakingRate";
             this.txtPlateMakeMakingRate.Size = new System.Drawing.Size(59, 20);
@@ -583,7 +585,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // txtPlateMakeMakingBill
             // 
             this.txtPlateMakeMakingBill.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPlateMakeMakingBill.Location = new System.Drawing.Point(507, 32);
+            this.txtPlateMakeMakingBill.Location = new System.Drawing.Point(487, 32);
             this.txtPlateMakeMakingBill.Multiline = true;
             this.txtPlateMakeMakingBill.Name = "txtPlateMakeMakingBill";
             this.txtPlateMakeMakingBill.ReadOnly = true;
@@ -594,7 +596,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(105, 1);
+            this.label38.Location = new System.Drawing.Point(85, 1);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(35, 26);
             this.label38.TabIndex = 29;
@@ -603,7 +605,7 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(507, 1);
+            this.label44.Location = new System.Drawing.Point(487, 1);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(58, 13);
             this.label44.TabIndex = 35;
@@ -1152,6 +1154,18 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             this.tabPage3.UseVisualStyleBackColor = true;
             this.tabPage3.Click += new System.EventHandler(this.tabPage3_Click);
             // 
+            // pplDataNavigation1
+            // 
+            this.pplDataNavigation1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pplDataNavigation1.CountLabelText = "1/0";
+            this.pplDataNavigation1.Datatable = null;
+            this.pplDataNavigation1.ItemNumber = 0;
+            this.pplDataNavigation1.Location = new System.Drawing.Point(134, 518);
+            this.pplDataNavigation1.Name = "pplDataNavigation1";
+            this.pplDataNavigation1.Size = new System.Drawing.Size(328, 26);
+            this.pplDataNavigation1.TabIndex = 10331;
+            this.pplDataNavigation1.UpdateOnChange += new System.EventHandler(this.pplDataNavigation1_UpdateOnChange);
+            // 
             // PlateInfoLabelMessage
             // 
             this.PlateInfoLabelMessage.AutoSize = true;
@@ -1543,22 +1557,22 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.PlateInfoSave_Click);
             // 
-            // pplDataNavigation1
+            // pplDataNavigation2
             // 
-            this.pplDataNavigation1.CountLabelText = null;
-            this.pplDataNavigation1.Datatable = null;
-            this.pplDataNavigation1.ItemNumber = 0;
-            this.pplDataNavigation1.Location = new System.Drawing.Point(134, 518);
-            this.pplDataNavigation1.Name = "pplDataNavigation1";
-            this.pplDataNavigation1.Size = new System.Drawing.Size(328, 26);
-            this.pplDataNavigation1.TabIndex = 10331;
-            this.pplDataNavigation1.UpdateOnChange += new System.EventHandler(this.pplDataNavigation1_UpdateOnChange);
+            this.pplDataNavigation2.CountLabelText = null;
+            this.pplDataNavigation2.Datatable = null;
+            this.pplDataNavigation2.ItemNumber = -1;
+            this.pplDataNavigation2.Location = new System.Drawing.Point(122, 231);
+            this.pplDataNavigation2.Name = "pplDataNavigation2";
+            this.pplDataNavigation2.Size = new System.Drawing.Size(299, 30);
+            this.pplDataNavigation2.TabIndex = 10322;
+            this.pplDataNavigation2.UpdateOnChange += new System.EventHandler(this.pplDataNavigation2_UpdateOnChange_4);
             // 
             // PplDataProduction_PlateTransaction
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 607);
+            this.ClientSize = new System.Drawing.Size(680, 619);
             this.Controls.Add(this.tabControl1);
             this.Name = "PplDataProduction_PlateTransaction";
             this.Text = "Plate Transaction";
@@ -1713,5 +1727,6 @@ namespace PRP.PPL.Data.Production.PlateTransaction
         private Label PlateInfoLabelMessage;
         private Label PlateMakingMessageLabel;
         private CDB.Function.PPLDataNavigation pplDataNavigation1;
+        private CDB.Function.PPLDataNavigation pplDataNavigation2;
     }
 }

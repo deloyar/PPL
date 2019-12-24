@@ -17,8 +17,34 @@ namespace PRP.CDB.Function
         public int ItemNumber { get { return itemNumber; }
             set
             {
+
                 itemNumber = value;
-                CountLabelText = itemNumber + "/" + NumberofItems;
+                CountLabelText = itemNumber+1 + "/" + NumberofItems;
+                if (Datatable != null && Datatable.Rows.Count>0)
+                {
+                    if((itemNumber+1)== Datatable.Rows.Count)
+                    {
+                        this.btnNext.Enabled = false;
+                        this.btnLast.Enabled = false;
+                    }
+                    else
+                    {
+                        this.btnNext.Enabled = true;
+                        this.btnLast.Enabled = true;
+                    }
+
+
+                    if (itemNumber == 0)
+                    {
+                        btnFirst.Enabled = false;
+                        btnPrevious.Enabled = false;
+                    }
+                    else
+                    {
+                        btnFirst.Enabled = true;
+                        btnPrevious.Enabled = true;
+                    }
+                }
             }
         }
         private string countLabelText;
@@ -55,70 +81,76 @@ namespace PRP.CDB.Function
             set
             {
                 this.dataTable = value;
-                ItemNumber = 0;
+                ItemNumber = -1;
             }
         } 
         public PPLDataNavigation()
         {
             InitializeComponent();
-            itemNumber = 0;
+            itemNumber = -1;
             
         }
 
         private void Updatelbl_Count_First(object sender, EventArgs e)
         {
-            if (Datatable != null)
+            
+            if (Datatable != null && Datatable.Rows.Count > 0)
             {
+
                 if (Datatable.Rows.Count > 0)
-                    ItemNumber = 1;
-                else
                     ItemNumber = 0;
+                else
+                    ItemNumber = -1;
             }
             else
             {
-                ItemNumber = 0;
+                ItemNumber = -1;
+                MessageBox.Show("No Item Found");
             }
         }
         private void Updatelbl_Count_Last(object sender, EventArgs e)
         {
-            if (Datatable != null)
+            if (Datatable != null && Datatable.Rows.Count > 0)
             {
                 if (Datatable.Rows.Count > 0)
-                    ItemNumber = Datatable.Rows.Count;
+                    ItemNumber = Datatable.Rows.Count-1;
                 else
-                    ItemNumber = 0;
+                    ItemNumber = -1;
             }
             else
             {
-                ItemNumber = 0;
+                ItemNumber = -1;
+                MessageBox.Show("No Item Found");
             }
         }
 
         private void Updatelbl_Count_Next(object sender, EventArgs e)
         {
-            if (Datatable != null)
+            if (Datatable != null && Datatable.Rows.Count > 0)
             {
-                if (Datatable.Rows.Count > 0 && Datatable.Rows.Count > ItemNumber)
+                if (Datatable.Rows.Count > 0 && Datatable.Rows.Count -1> ItemNumber)
                     ItemNumber++;
             }
             else
             {
-                ItemNumber = 0;
+                ItemNumber = -1;
+                MessageBox.Show("No Item Found");
             }
         }
 
         private void Updatelbl_Count_Prev(object sender, EventArgs e)
         {
-            if (Datatable != null)
+            if (Datatable != null && Datatable.Rows.Count > 0)
             {
-                if (ItemNumber > 1)
+                if (ItemNumber > 0)
                 {
                     ItemNumber--;
                 }
             }
             else
             {
-                ItemNumber = 0;
+                ItemNumber = -1;
+                MessageBox.Show("No Item Found");
             }
         }
     }
