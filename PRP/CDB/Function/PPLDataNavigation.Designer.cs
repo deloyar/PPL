@@ -30,6 +30,7 @@ namespace PRP.CDB.Function
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PPLDataNavigation));
             this.btnLast = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
@@ -39,81 +40,50 @@ namespace PRP.CDB.Function
             // 
             // btnLast
             // 
-            this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.btnLast, "btnLast");
             this.btnLast.BackColor = System.Drawing.SystemColors.Control;
-            this.btnLast.Location = new System.Drawing.Point(246, 3);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(33, 25);
-            this.btnLast.TabIndex = 8;
-            this.btnLast.Text = ">|";
             this.btnLast.UseVisualStyleBackColor = false;
             // 
             // btnNext
             // 
-            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.btnNext, "btnNext");
             this.btnNext.BackColor = System.Drawing.SystemColors.Control;
-            this.btnNext.Location = new System.Drawing.Point(203, 3);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(33, 25);
-            this.btnNext.TabIndex = 7;
-            this.btnNext.Text = ">";
             this.btnNext.UseVisualStyleBackColor = false;
             // 
             // btnPrevious
             // 
-            this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.btnPrevious, "btnPrevious");
             this.btnPrevious.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPrevious.Location = new System.Drawing.Point(53, 3);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(33, 25);
-            this.btnPrevious.TabIndex = 6;
-            this.btnPrevious.Text = "<";
             this.btnPrevious.UseVisualStyleBackColor = false;
             // 
             // btnFirst
             // 
-            this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.btnFirst, "btnFirst");
             this.btnFirst.BackColor = System.Drawing.SystemColors.Control;
-            this.btnFirst.Location = new System.Drawing.Point(13, 3);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(33, 25);
-            this.btnFirst.TabIndex = 5;
-            this.btnFirst.Text = "|<";
             this.btnFirst.UseVisualStyleBackColor = false;
             // 
             // textBox
             // 
-            this.textBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            resources.ApplyResources(this.textBox, "textBox");
             this.textBox.BackColor = System.Drawing.SystemColors.Control;
-            this.textBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(96, 3);
             this.textBox.Name = "textBox";
             this.textBox.ReadOnly = true;
-            this.textBox.Size = new System.Drawing.Size(98, 24);
-            this.textBox.TabIndex = 9;
-            this.textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // PPLDataNavigation
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.ButtonMenu;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.btnLast);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.btnFirst);
+            resources.ApplyResources(this, "$this");
             this.Name = "PPLDataNavigation";
-            this.Size = new System.Drawing.Size(299, 30);
             this.ResumeLayout(false);
             this.PerformLayout();
 

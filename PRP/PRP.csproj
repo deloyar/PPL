@@ -363,6 +363,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\PRP.CDB.Function.PPLDataNavigation.datasource" />
     <None Include="Properties\DataSources\PRP.PPL.Data.MIS.MasterDetail2.Sample.datasource" />
