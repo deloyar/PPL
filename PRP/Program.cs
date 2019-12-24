@@ -25,10 +25,10 @@ namespace PRP
             //Application.Run(new PplDataMIS_MasterDetail());
             //Application.Run(new pplDataDistribution_Challan());
             //Application.Run(new PRP.PPL.Data.MIS.MasterDetail2.Form2());
-            //Application.Run(new PplDataProduction_PlateTransaction());
+            Application.Run(new PplDataProduction_PlateTransaction());
             //Application.Run(new PRP.PPL.Data.MIS.MasterDetail2.Hierarchy());
             //Application.Run(new PRP.PPL.Data.MIS.MasterDetail2.SampleBinding());
-            Application.Run(new Form7());
+            //Application.Run(new Form8());
 
         }
     }

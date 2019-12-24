@@ -144,6 +144,15 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             txtPlateMakeBookType.ReadOnly = true;
             txtPlateMakeEdition.ReadOnly = true;
             //LoadDropdownAccountCode();
+
+
+            var sql = @"SELECT [ID] ,[Plate Code],[Plate Name],[Plate NameB],[Plate Address],[Plate Telephone],[Plate Manager],
+                        [Plate Propritor],[Plate Black Machine Qty],[Plate Color Machine Qty],[Plate Capacity Black],[Plate Capacity Color],[Plate Facility],[Account Code],[Plate Balance],[About Press],[Remarks],[Status]
+                       FROM [prd].[Plate Info] order by [Plate Code] asc;";
+            DataTable dt = Connstring.SqlDataTable(sql);
+            pplDataNavigation1.Datatable = dt;
+
+
             MakeCodePWO();
             ButtonVisibilityUpdate(0);
             ButtonVisibilityPlateType(0);
@@ -1832,6 +1841,17 @@ namespace PRP.PPL.Data.Production.PlateTransaction
             {
                 e.Handled = true;
             }
+        }
+
+        private void pplDataNavigation1_UpdateOnChange(object sender, EventArgs e)
+        {
+            //if (pplDataNavigation1.ItemNumber == 0)
+            //{
+            //    return;
+            //}
+            var id =pplDataNavigation1.Datatable.Rows[pplDataNavigation1.ItemNumber]["Plate Code"].ToString();
+            txtPlateInfoSearch.Text = id;
+            btnPlateInfoSearch_Click(btnPlateInfoSearch, EventArgs.Empty);
         }
     }
 }

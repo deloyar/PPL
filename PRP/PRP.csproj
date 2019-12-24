@@ -91,6 +91,12 @@
     <Compile Include="CDB\Function\PPLDataGridView.Designer.cs">
       <DependentUpon>PPLDataGridView.cs</DependentUpon>
     </Compile>
+    <Compile Include="CDB\Function\PPLDataNavigation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CDB\Function\PPLDataNavigation.Designer.cs">
+      <DependentUpon>PPLDataNavigation.cs</DependentUpon>
+    </Compile>
     <Compile Include="CDB\Function\PPLDecimalTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -194,6 +200,12 @@
     <Compile Include="PPL\Data\MIS\MasterDetail2\Form7.Designer.cs">
       <DependentUpon>Form7.cs</DependentUpon>
     </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form8.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PPL\Data\MIS\MasterDetail2\Form8.Designer.cs">
+      <DependentUpon>Form8.cs</DependentUpon>
+    </Compile>
     <Compile Include="PPL\Data\MIS\MasterDetail2\GridDBXML.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +281,9 @@
     <EmbeddedResource Include="CDB\Function\PPLDataGridView.resx">
       <DependentUpon>PPLDataGridView.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CDB\Function\PPLDataNavigation.resx">
+      <DependentUpon>PPLDataNavigation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CDB\Function\PPLNavigation.resx">
       <DependentUpon>PPLNavigation.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,6 +320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form7.resx">
       <DependentUpon>Form7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\Form8.resx">
+      <DependentUpon>Form8.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PPL\Data\MIS\MasterDetail2\GridDBXML.resx">
       <DependentUpon>GridDBXML.cs</DependentUpon>
@@ -346,6 +364,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\PRP.CDB.Function.PPLDataNavigation.datasource" />
     <None Include="Properties\DataSources\PRP.PPL.Data.MIS.MasterDetail2.Sample.datasource" />
     <None Include="Properties\DataSources\PRP.PPL.Data.MIS.MasterDetail2.Sample.SampleDataSource" />
     <None Include="Properties\DataSources\PRP.PPL.Data.MIS.MasterDetail2.User.datasource" />

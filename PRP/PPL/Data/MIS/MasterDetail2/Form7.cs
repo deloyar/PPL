@@ -25,6 +25,7 @@ namespace PRP.PPL.Data.MIS.MasterDetail2
             pplNavigation1.SetModel<User>(ref userBindingSource);
             pplNavigation2.SetModel<User>(ref userBindingSource);
 
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,6 +41,8 @@ namespace PRP.PPL.Data.MIS.MasterDetail2
             bs.DataSource = users;
             pplNavigation1.BindingSource = bs;
             pplNavigation2.BindingSource = bs;
+
+
 
 
         }
